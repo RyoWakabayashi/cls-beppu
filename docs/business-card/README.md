@@ -7,6 +7,15 @@
 - 表面：ロゴ／公式サイト URL／氏名／QR（公式サイト・LINE オープンチャット）
 - 裏面：PVMV。PURPOSE・VISION・MISSION・VALUES をロゴの4色で色分け
 
+配色はロゴから採取した以下の4色を使用している。
+
+| 色 | 値 | 用途 |
+| --- | --- | --- |
+| 赤 | `#B53128` | PURPOSE、罫線、下部の帯 |
+| 青 | `#344FA9` | VISION |
+| 緑 | `#34793C` | MISSION |
+| 金茶 | `#B76426` | VALUES |
+
 ## 別メンバー分をつくる
 
 表面スライドの「運営チーム」「若林　諒」「WAKABAYASHI RYO」を書き換えるだけでよい。
@@ -16,11 +25,14 @@
 
 | ファイル | 内容 |
 | --- | --- |
-| `assets/logo.png` | CLS別府 横組みロゴ（背景透過） |
+| `assets/logo.ai` | CLS別府 ロゴ（ベクター、15アートボード）。名刺は2番目の横組み（CLSマーク＋べっぷ BEPPU）を使用 |
 | `assets/qr_site.png` | https://www.cls-beppu.com/ |
-| `assets/qr_line.png` | LINE オープンチャット「CLS別府」招待リンク |
+| `assets/qr_line.jpg` | LINE オープンチャット「CLS別府」招待QR（LINE 提供） |
 
 `preview_front.png` / `preview_back.png` は仕上がりイメージ（300dpi）。
+
+PPTX にはロゴをラスタライズしたものが埋め込まれている。ロゴを差し替える場合は
+`logo.ai` の該当アートボードから透過 PNG を書き出して置き換える。
 
 ## 印刷に出すとき
 
