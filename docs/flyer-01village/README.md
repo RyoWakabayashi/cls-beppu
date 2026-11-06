@@ -18,4 +18,5 @@ npm pack @fontsource/noto-sans-jp @fontsource/zen-maru-gothic
 node render.js   # out.pdf / out_350dpi.png が出力される
 ```
 
-ロゴは `../business-card/assets/logo.ai` の5番目のアートボード（縦組み）を SVG 化したもの。
+ロゴは `../business-card/assets/logo.ai` の13番目のアートボード（白・縦組み）を SVG 化し、黒背景を除いたもの。
+背景写真 `assets/bg.jpg` は別府の湯けむり夜景（Drive「背景画像」の元写真）。

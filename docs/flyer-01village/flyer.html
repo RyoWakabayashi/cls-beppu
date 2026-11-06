@@ -43,17 +43,27 @@ body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);-webkit-print-color-
 .note{position:absolute;left:0;right:0;bottom:13.5mm;text-align:center;font-size:9pt;color:#5a4f47;letter-spacing:.04em}
 .band{position:absolute;left:0;right:0;bottom:0;height:8mm;display:flex}
 .band i{flex:1}
+
+.hero{position:absolute;left:0;top:0;width:210mm;height:178mm;background:url(assets/bg.jpg) center 62%/cover no-repeat}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,22,58,.62) 0%,rgba(8,22,58,.32) 36%,rgba(8,22,58,.45) 60%,rgba(8,20,48,.88) 100%)}
+.hero-in{position:relative;z-index:1;text-align:center;padding-top:14mm;color:#fff}
+.hero .logo{width:44mm}
+.hero .sub{color:#fff;opacity:.95;text-shadow:0 0 2mm rgba(0,0,0,.5)}
+.hero .save{color:#ffd9a8}
+.hero .date .y,.hero .date .md,.hero .date .tm{color:#fff;text-shadow:0 .5mm 3mm rgba(0,0,0,.45)}
+.hero .date .md .dot{color:#ff7a5c}
+.hero .date .wd{background:#fff;color:#0d2350}
+.hero .venue{color:#fff}
+.hero .venue small{color:#dfe6f3}
+.hero .venue .k{border-color:#fff}
+.low{position:absolute;left:0;right:0;top:178mm;text-align:center;padding-top:6mm}
+.page{background:var(--cream)}
+.qrs{bottom:22mm;padding:5mm 8mm 5mm}
+.qr img{width:38mm;height:38mm}
+.note{bottom:11.5mm}
 </style></head><body><div class="page">
-<svg class="steam" viewBox="0 0 210 297" preserveAspectRatio="none" aria-hidden="true">
-  <g fill="none" stroke-linecap="round" stroke-width="2.2" opacity=".13">
-    <path d="M14 120 C 4 100, 26 88, 14 66 S 20 34, 12 18" stroke="#34793C"/>
-    <path d="M24 128 C 16 108, 36 96, 26 74 S 32 44, 26 26" stroke="#344FA9"/>
-    <path d="M196 120 C 206 100, 184 88, 196 66 S 190 34, 198 18" stroke="#B76426"/>
-    <path d="M186 128 C 194 108, 174 96, 184 74 S 178 44, 184 26" stroke="#34793C"/>
-  </g>
-</svg>
-<div class="top">
-  <img class="logo" src="assets/logo_v.svg" alt="CLS べっぷ BEPPU">
+<div class="hero"><div class="hero-in">
+  <img class="logo" src="assets/logo_w.svg" alt="CLS べっぷ BEPPU">
   <div class="sub">コミュニティ・リーダーズ・サミット in 別府</div>
   <div class="badge">第2回 開催決定！</div>
   <div class="save">SAVE THE DATE</div>
@@ -63,7 +73,9 @@ body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);-webkit-print-color-
     <span class="dw"><span class="wd">土</span><span class="tm">13:00〜</span></span>
   </div>
   <div class="venue"><span class="k">会場</span>レンガホール<small>旧別府郵便電話局電話分室（大分県別府市）</small></div>
-  <div class="purpose">挑戦者の<b>熱</b>を、別府の「源泉」から全国へ。</div>
+</div></div>
+<div class="low">
+  <div class="purpose" style="margin-top:0">挑戦者の<b>熱</b>を、別府の「源泉」から全国へ。</div>
   <div class="purpose-en">COMMUNITY LEADERS SUMMIT in BEPPU</div>
 </div>
 <div class="qrs">
