@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fontsource-noto-sans-jp-5.3.1/package/400.css">
+<link rel="stylesheet" href="fonts/fontsource-noto-sans-jp-5.3.1/package/500.css">
+<link rel="stylesheet" href="fonts/fontsource-noto-sans-jp-5.3.1/package/700.css">
+<link rel="stylesheet" href="fonts/fontsource-noto-sans-jp-5.3.1/package/900.css">
+<link rel="stylesheet" href="fonts/fontsource-zen-maru-gothic-5.3.1/package/700.css">
+<link rel="stylesheet" href="fonts/fontsource-zen-maru-gothic-5.3.1/package/900.css">
+<style>
+@page { size: A4; margin: 0; }
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--red:#B53128;--blue:#344FA9;--green:#34793C;--gold:#B76426;--ink:#2a2420;--cream:#FBF5EA}
+html,body{width:210mm;height:297mm}
+body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{position:relative;width:210mm;height:297mm;overflow:hidden;background:var(--cream)}
+.steam{position:absolute;inset:0;width:100%;height:100%}
+.top{position:relative;text-align:center;padding-top:17mm}
+.logo{width:56mm;height:auto;display:block;margin:0 auto}
+.sub{margin-top:4mm;font-size:10.5pt;letter-spacing:.18em;font-weight:500;color:#5a4f47}
+.badge{display:inline-block;margin-top:9mm;background:var(--red);color:#fff;font-family:"Zen Maru Gothic";font-weight:900;font-size:15pt;letter-spacing:.12em;padding:1.6mm 8mm 2mm;border-radius:20mm}
+.save{font-family:"Zen Maru Gothic";font-weight:700;font-size:11pt;letter-spacing:.3em;color:var(--red);margin-top:3mm}
+.date{margin-top:3mm;display:flex;justify-content:center;align-items:flex-end;gap:3mm;font-family:"Zen Maru Gothic";font-weight:900;line-height:1}
+.date .y{font-size:22pt;color:var(--ink);writing-mode:vertical-rl;letter-spacing:.05em;margin-bottom:3mm}
+.date .md{font-size:92pt;color:var(--ink);letter-spacing:-.01em}
+.date .md .dot{color:var(--red)}
+.date .dw{display:flex;flex-direction:column;align-items:flex-start;gap:2mm;margin-bottom:4mm}
+.date .wd{font-size:20pt;background:var(--ink);color:var(--cream);border-radius:50%;width:13mm;height:13mm;display:flex;align-items:center;justify-content:center}
+.date .tm{font-size:19pt}
+.venue{margin-top:6mm;font-size:12.5pt;font-weight:700}
+.venue small{display:block;font-size:9.5pt;font-weight:400;color:#5a4f47;margin-top:1mm;letter-spacing:.05em}
+.venue .k{display:inline-block;border:1.2px solid var(--ink);font-size:9pt;padding:0 2mm;margin-right:2.5mm;vertical-align:2px;border-radius:1mm}
+.purpose{margin:9mm auto 0;font-family:"Zen Maru Gothic";font-weight:700;font-size:13pt;letter-spacing:.06em;color:var(--ink)}
+.purpose b{color:var(--red)}
+.purpose-en{font-size:8pt;letter-spacing:.35em;color:#8a7d72;margin-top:1.5mm;font-weight:500}
+.qrs{position:absolute;left:16mm;right:16mm;bottom:26mm;background:#fff;border-radius:5mm;padding:7mm 8mm 6mm;display:flex;justify-content:space-around;box-shadow:0 0.6mm 0 rgba(0,0,0,.06)}
+.qr{text-align:center;width:72mm}
+.qr .h{font-family:"Zen Maru Gothic";font-weight:900;font-size:12.5pt;margin-bottom:3mm}
+.qr .h .n{display:inline-block;width:6.4mm;height:6.4mm;line-height:6.4mm;border-radius:50%;color:#fff;font-size:9.5pt;margin-right:1.8mm;vertical-align:1px}
+.qr img{width:40mm;height:40mm;display:block;margin:0 auto;image-rendering:pixelated}
+.qr .d{font-size:8.6pt;color:#5a4f47;margin-top:2.5mm;line-height:1.55}
+.qr .u{font-weight:700;color:var(--ink);font-size:9.5pt;letter-spacing:.02em}
+.vline{width:0;border-left:1.2px dashed #d8cfc4;margin:2mm 0}
+.note{position:absolute;left:0;right:0;bottom:13.5mm;text-align:center;font-size:9pt;color:#5a4f47;letter-spacing:.04em}
+.band{position:absolute;left:0;right:0;bottom:0;height:8mm;display:flex}
+.band i{flex:1}
+
+.hero{position:absolute;left:0;top:0;width:210mm;height:178mm;background:url(assets/bg.jpg) center 62%/cover no-repeat}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,16,44,.72) 0%,rgba(6,16,44,.55) 36%,rgba(6,16,44,.62) 60%,rgba(6,14,36,.9) 100%)}
+.hero-in{position:relative;z-index:1;text-align:center;padding-top:14mm;color:#fff}
+.hero .logo{width:44mm}
+.hero .sub{color:#fff;opacity:.95}
+.hero .save{color:#ffd9a8}
+.hero .date .y,.hero .date .md,.hero .date .tm{color:#fff}
+.hero .date .md .dot{color:#ff7a5c}
+.hero .date .wd{background:#fff;color:#0d2350}
+.hero .venue{color:#fff}
+.hero .venue small{color:#dfe6f3}
+.hero .venue .k{border-color:#fff}
+.low{position:absolute;left:0;right:0;top:178mm;text-align:center;padding-top:6mm}
+.page{background:var(--cream)}
+.qrs{bottom:22mm;padding:5mm 8mm 5mm}
+.qr img{width:38mm;height:38mm}
+.note{bottom:11.5mm}
+</style></head><body><div class="page">
+<div class="hero"><div class="hero-in">
+  <img class="logo" src="assets/logo_w.svg" alt="CLS べっぷ BEPPU">
+  <div class="sub">コミュニティ・リーダーズ・サミット in 別府</div>
+  <div class="badge">第2回 開催決定！</div>
+  <div class="save">SAVE THE DATE</div>
+  <div class="date">
+    <span class="y">2027</span>
+    <span class="md">1<span class="dot">.</span>23</span>
+    <span class="dw"><span class="wd">土</span><span class="tm">13:00〜</span></span>
+  </div>
+  <div class="venue"><span class="k">会場</span>別府市レンガホール<small>旧別府郵便電話局電話分室</small></div>
+</div></div>
+<div class="low">
+  <div class="purpose" style="margin-top:0">挑戦者の<b>熱</b>を、別府の「源泉」から全国へ。</div>
+  <div class="purpose-en">COMMUNITY LEADERS SUMMIT in BEPPU</div>
+</div>
+<div class="qrs">
+  <div class="qr">
+    <div class="h"><span class="n" style="background:var(--blue)">1</span>公式サイト</div>
+    <img src="../business-card/assets/qr_site.png" alt="">
+    <div class="d"><span class="u">www.cls-beppu.com</span><br>イベント詳細を随時更新中</div>
+  </div>
+  <div class="vline"></div>
+  <div class="qr">
+    <div class="h"><span class="n" style="background:var(--green)">2</span>LINEオープンチャット</div>
+    <img src="../business-card/assets/qr_line.jpg" alt="">
+    <div class="d"><span class="u">「CLS別府」</span><br>最新情報をいち早くお届けします</div>
+  </div>
+</div>
+<div class="note">詳細は現在企画中です。最新情報は公式サイト・LINEオープンチャットでお知らせします。</div>
+<div class="band"><i style="background:var(--green)"></i><i style="background:var(--blue)"></i><i style="background:var(--gold)"></i><i style="background:var(--red);flex:3"></i></div>
+</div></body></html>
