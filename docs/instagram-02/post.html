@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fontsource-noto-sans-jp-5.3.1/package/400.css">
+<link rel="stylesheet" href="fonts/fontsource-noto-sans-jp-5.3.1/package/500.css">
+<link rel="stylesheet" href="fonts/fontsource-noto-sans-jp-5.3.1/package/700.css">
+<link rel="stylesheet" href="fonts/fontsource-noto-sans-jp-5.3.1/package/900.css">
+<link rel="stylesheet" href="fonts/fontsource-zen-maru-gothic-5.3.1/package/700.css">
+<link rel="stylesheet" href="fonts/fontsource-zen-maru-gothic-5.3.1/package/900.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--red:#B53128;--blue:#344FA9;--green:#34793C;--gold:#B76426;--ink:#2a2420;--cream:#FBF5EA}
+body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:#000}
+.slide{position:relative;width:1080px;height:var(--h);overflow:hidden}
+.band{position:absolute;left:0;right:0;bottom:0;height:22px;display:flex;z-index:2}
+.band i{flex:1}
+.zen{font-family:"Zen Maru Gothic"}
+
+/* ---- slide 1: key visual ---- */
+.kv{background:url(../flyer-01village/assets/bg.jpg) center 60%/cover no-repeat;color:#fff;text-align:center}
+.kv:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,16,44,.74) 0%,rgba(6,16,44,.55) 38%,rgba(6,16,44,.66) 64%,rgba(6,14,36,.93) 100%)}
+.kv .in{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:22px}
+.kv .logo{width:var(--logo);display:block}
+.kv .sub{margin-top:14px;font-size:25px;letter-spacing:.18em;font-weight:500}
+.kv .badge{margin-top:var(--gap);background:var(--red);color:#fff;font-family:"Zen Maru Gothic";font-weight:900;font-size:40px;letter-spacing:.12em;padding:6px 40px 9px;border-radius:60px}
+.kv .date{margin-top:calc(var(--gap) * .7);display:flex;justify-content:center;align-items:flex-end;gap:12px;font-family:"Zen Maru Gothic";font-weight:900;line-height:1}
+.kv .y{font-size:46px;writing-mode:vertical-rl;letter-spacing:.05em;margin-bottom:12px}
+.kv .md{font-size:var(--md);letter-spacing:-.01em}
+.kv .dot{color:#ff7a5c}
+.kv .dw{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:16px}
+.kv .wd{font-size:42px;background:#fff;color:#0d2350;border-radius:50%;width:66px;height:66px;display:flex;align-items:center;justify-content:center}
+.kv .tm{font-size:46px}
+.kv .venue{margin-top:calc(var(--gap) * .6);font-size:36px;font-weight:700}
+.kv .venue .k{display:inline-block;border:2px solid #fff;font-size:23px;padding:0 10px 2px;margin-right:12px;vertical-align:6px;border-radius:6px}
+.kv .set{margin-top:12px;font-size:26px;color:#ffd9a8;font-weight:700;letter-spacing:.06em}
+.kv .cta{margin-top:var(--gap);display:inline-flex;align-items:center;gap:16px;background:#fff;color:var(--ink);border-radius:60px;padding:14px 38px 16px;font-size:29px;font-weight:700;letter-spacing:.04em}
+.kv .cta b{background:var(--red);color:#fff;border-radius:40px;padding:2px 16px 4px;font-size:25px}
+
+/* ---- slide 2: contents ---- */
+.ct{background:var(--cream);padding:var(--pad) 74px 0}
+.ct .head{display:flex;align-items:center;justify-content:space-between}
+.ct .head img{height:var(--slogo)}
+.ct .head .t{text-align:right}
+.ct .head .t .l{display:inline-block;background:var(--red);color:#fff;font-family:"Zen Maru Gothic";font-weight:900;font-size:26px;letter-spacing:.1em;padding:2px 20px 5px;border-radius:40px}
+.ct .head .t .d{font-family:"Zen Maru Gothic";font-weight:900;font-size:40px;margin-top:8px;letter-spacing:.02em}
+.ct .head .t .d small{font-size:24px}
+.ct .head .t .v{font-size:23px;font-weight:500;color:#5a4f47;margin-top:2px}
+.ct h2{margin-top:var(--h2gap);font-family:"Zen Maru Gothic";font-weight:900;font-size:50px;letter-spacing:.06em;text-align:center}
+.ct h2 b{color:var(--red)}
+.items{margin-top:calc(var(--h2gap) * .6);display:grid;grid-template-columns:1fr 1fr;gap:var(--igap)}
+.it{background:#fff;border-radius:24px;padding:var(--ipad) 30px;position:relative;overflow:hidden}
+.it:before{content:"";position:absolute;left:0;right:0;top:0;height:10px;background:var(--c)}
+.it .n{font-family:"Zen Maru Gothic";font-weight:900;font-size:22px;color:var(--c);letter-spacing:.2em}
+.it h3{font-family:"Zen Maru Gothic";font-weight:900;font-size:36px;line-height:1.3;margin-top:4px}
+.it p{font-size:22px;line-height:1.6;color:#5a4f47;margin-top:10px}
+.more{margin-top:var(--igap);text-align:center;font-size:23px;color:#5a4f47;line-height:1.6}
+.more b{color:var(--ink)}
+.apply{position:absolute;left:74px;right:74px;bottom:calc(22px + var(--abot));background:var(--ink);color:#fff;border-radius:24px;padding:20px 32px 22px;display:flex;align-items:center;justify-content:space-between}
+.apply .a1{font-family:"Zen Maru Gothic";font-weight:900;font-size:33px;letter-spacing:.04em}
+.apply .a1 small{display:block;font-family:"Noto Sans JP";font-weight:500;font-size:20px;color:#d6cfc6;letter-spacing:.02em;margin-top:2px}
+.apply .a2{background:var(--red);border-radius:40px;padding:8px 24px 10px;font-weight:700;font-size:24px;white-space:nowrap}
+
+/* sizes */
+.sq{--h:1080px;--logo:250px;--gap:30px;--md:200px;--pad:60px;--slogo:124px;--h2gap:36px;--igap:22px;--ipad:26px;--abot:34px}
+.pt{--h:1350px;--logo:330px;--gap:46px;--md:240px;--pad:92px;--slogo:156px;--h2gap:66px;--igap:30px;--ipad:46px;--abot:60px}
+</style></head><body>
+<div id="s1" class="slide kv">
+  <div class="in">
+    <img class="logo" src="../flyer-01village/assets/logo_w.svg" alt="CLS べっぷ BEPPU">
+    <div class="sub">コミュニティ・リーダーズ・サミット in 別府</div>
+    <div class="badge">第2回 開催決定！</div>
+    <div class="date">
+      <span class="y">2027</span>
+      <span class="md">1<span class="dot">.</span>23</span>
+      <span class="dw"><span class="wd">土</span><span class="tm">13:00〜</span></span>
+    </div>
+    <div class="venue"><span class="k">会場</span>別府市レンガホール</div>
+    <div class="set">本編＋交流会を、ひとつの会場で</div>
+    <div class="cta"><b>申込受付中</b>プロフィールのリンクから</div>
+  </div>
+  <div class="band"><i style="background:var(--green)"></i><i style="background:var(--blue)"></i><i style="background:var(--gold)"></i><i style="background:var(--red);flex:3"></i></div>
+</div>
+<div id="s2" class="slide ct">
+  <div class="head">
+    <img src="logo_color.svg" alt="CLS べっぷ">
+    <div class="t">
+      <span class="l">第2回 CLS別府</span>
+      <div class="d">2027.1.23<small>（土）13:00〜</small></div>
+      <div class="v">別府市レンガホール</div>
+    </div>
+  </div>
+  <h2>第2回の<b>みどころ</b></h2>
+  <div class="items">
+    <div class="it" style="--c:var(--red)"><div class="n">01</div><h3>大分県内の<br>リーダーが登壇</h3><p>県内リーダーの熱量に触れる時間。</p></div>
+    <div class="it" style="--c:var(--blue)"><div class="n">02</div><h3>運営の達人<br>セッション</h3><p>運営に悩む方へ、達人が知見を共有。</p></div>
+    <div class="it" style="--c:var(--green)"><div class="n">03</div><h3>恒例の全員参加型<br>ワークショップ</h3><p>全員で手を動かす体験型プログラム。</p></div>
+    <div class="it" style="--c:var(--gold)"><div class="n">04</div><h3>本編＋交流会を<br>ひとつの会場で</h3><p>第0回の会場で、交流をもっと深く。</p></div>
+  </div>
+  <div class="more">前夜祭・地獄蒸しツアー・2次会ツアー・大人の遠足も<b>企画中！</b></div>
+  <div class="apply">
+    <div class="a1">お申し込みはPeatixから<small>プロフィールのリンク ／ www.cls-beppu.com</small></div>
+    <div class="a2">受付中</div>
+  </div>
+  <div class="band"><i style="background:var(--green)"></i><i style="background:var(--blue)"></i><i style="background:var(--gold)"></i><i style="background:var(--red);flex:3"></i></div>
+</div>
+</body></html>
